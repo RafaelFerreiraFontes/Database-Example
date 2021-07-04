@@ -11,22 +11,39 @@
     
     <div class="container">
 
-        <div class="box">       
+        <div id="box-table">       
 
-            <ul>
-                {% for user in users %}
-
-                {% for key, value in user %}
-
-                <li>{{ key }}  => {{ value }}</li>
-                
-                {% endfor %}
-
-                <br></br>
-
-                {% endfor %}
-            </ul>
+                <table id="user-table"> 
+                        <tr class="box-table" style="background-color: #8a2be2; color: #fff;">
+                            <th>Username</th>
             
+                            <th>Email</th>
+                            
+                            <th>Date</th>
+                            
+                            <th>Password</th>
+                            
+                            <th>Password Confirm</th>
+                        </tr>
+            
+                        {% for user in users %}
+                        
+                            <tr class="box-table">
+        
+                                <td>{{ user['Username'] }}</td>
+        
+                                <td>{{ user['Email'] }}</td>
+                                
+                                <td>{{ user['Date'] }}</td>
+                                
+                                <td>{{ user['Password'] }}</td>
+                                
+                                <td>{{ user['PasswordConf'] }}</td>
+        
+                            </tr>
+                        
+                        {% endfor %}
+                </table>
         </div>
 
     </div>
