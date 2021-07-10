@@ -3,7 +3,7 @@ const nunjucks = require('nunjucks');
 const sqlite3 = require('sqlite3').verbose();
 
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 let users = [];
 
